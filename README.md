@@ -7,7 +7,7 @@
 **import**
 
 ```npm
-npm i antelope-ui -S
+npm i page-toggle-hook -S
 ```
 
 **use**
