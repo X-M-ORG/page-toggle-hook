@@ -27,6 +27,8 @@ Vue.use(pageToggleHook, { env: 'h5' })
 
 ## 使用
 
+> 只在页面级组件中生效
+
 **vue**
 
 ```html
@@ -51,7 +53,7 @@ Vue.use(pageToggleHook, { env: 'h5' })
 
 ### H5
 
-无需设置
+无需额外设置，挂载即食。
 
 ### miniapp
 
