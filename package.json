@@ -1,11 +1,14 @@
 {
   "name": "page-toggle-hook",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Util for Vue.js.",
-  "main": "src/index.js",
+  "main": "dist/page-toggle-hook.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/X-M-ORG/page-toggle-hook.git"
+  },
+  "scripts": {
+    "build": "node node_modules/webpack-cli/bin/cli.js"
   },
   "author": "X-M-ORG",
   "license": "MIT",
@@ -17,5 +20,12 @@
     "page-toggle-hook",
     "vue",
     "util"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
 }

@@ -8,7 +8,7 @@ export default function ({ onShow, onHide, watcherShow, watcherHide }) {
     navigateTo.call(wx.miniProgram, {
       ...options,
       success(res) {
-        options.success.call(options, res)
+        options.success(res)
         watcherHide.forEach((vm) => vm.$options[onHide].call(vm))
       }
     })
