@@ -5,10 +5,10 @@ export default function ({ onShow, onHide, watcherShow, watcherHide }) {
     watcherShow.forEach((vm) => {
       // 微信小程序更新 hash 会导致 history 增加一层，故需要 history.back() 一次
       if (isHide) {
-        history.back()
         isHide = false
+        history.back()
+        vm.$options[onShow].call(vm)
       }
-      vm.$options[onShow].call(vm)
     })
   })
 
