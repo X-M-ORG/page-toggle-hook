@@ -1,6 +1,14 @@
 export default function ({ onShow, onHide, watcherShow, watcherHide }) {
   window.addEventListener('hashchange', () => {
-    watcherShow.forEach((vm) => vm.$options[onShow].call(vm))
+    let back = false
+    watcherShow.forEach((vm) => {
+      // 微信小程序更新 hash 会导致 history 增加一层，故需要 history.back() 一次
+      if (!back) {
+        history.back()
+        back = true
+      }
+      vm.$options[onShow].call(vm)
+    })
   })
 
   const { navigateTo } = wx.miniProgram
