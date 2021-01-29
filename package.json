@@ -1,6 +1,6 @@
 {
   "name": "page-toggle-hook",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Util for Vue.js.",
   "main": "dist/page-toggle-hook.js",
   "repository": {
